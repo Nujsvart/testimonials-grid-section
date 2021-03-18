@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --grayishblue: hsl(217, 19%, 35%);
+    --blackishblue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --lightgray: hsl(0, 0%, 81%);
+    --lightgrayishblue: hsl(210, 46%, 95%);
+
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 100%;
+
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--lightgrayishblue);
+    margin: 0;
+    padding: 0;
+
+}
+
+img {
+    width: 100%;
+}
+
+.black {
+    color:rgb(63, 61, 61);
+}
+
+.white {
+    color: var(--white);
+}
+
+.container {
+    max-width: 1110px;
+    max-height: 571px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.8em 2.3em;
+    grid-template-areas: 
+    'daniel daniel jon kira'
+    'jean patrick patrick kira';
+}
+
+.container .box-1 {
+    grid-area: daniel;
+    background-color: var(--violet);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 355px;
+
+}
+
+.container .box-2 {
+    grid-area: jon;
+    background-color: var(--grayishblue);
+
+}
+
+.container .box-3 {
+    grid-area: jean;
+    background-color: var(--white);
+
+}
+
+.container .box-4 {
+    grid-area: patrick;
+    background-color: var(--blackishblue);
+
+}
+
+.container .box-5 {
+    grid-area: kira;
+    background-color: var(--white);
+
+}
+
+.grid {
+    border-radius: 8px;
+    padding: 2em 2.5em 1.2em 2.5em;
+}
+
+.grid h1 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.16px;
+}
+
+.pad {
+    padding-top: 8px;
+    
+}
+
+.grid > p {
+    opacity: 70%;
+    line-height: 1.45;
+    font-size: 13px;
+    font-weight: lighter;
+   
+}
+
+.grid .header {
+    display: flex;
+}
+
+.grid .header p {
+    margin: 2px;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.grid .header .avatar {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.459);
+    margin-right: 1em;
+}
+
+.grid .header .avatar img {
+    border-radius: 50%;
+}
+
+.grid .header .title .verified {
+    opacity: 50%;
+}
+
+.attribution {
+    margin-top: 3em;
+    position: relative;
+    left: 150%
+    
+}
+
+@media (max-width: 1040px) {
+
+    body {
+        overflow-x: hidden;
+        place-items:unset;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .container {
+        margin-top: 60px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        'daniel'
+        'jon'
+        'kira'
+        'patrick'
+        'jean';
+
+    }
+
+    .grid {
+        max-width: 327px;
+    }
+
+    .attribution {
+        position: initial;
+    }
+
+
+}
+
+
+
+
+
+
